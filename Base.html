@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <title>Ejercicio Mapa</title> 
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/> 
+        <link rel="stylesheet" href="../Ubicación/"> 
+    </head> 
+    <body> 
+        <main> 
+            <div> 
+                <h2>Mapa</h2> 
+                <p>Esta es el barrio donde vivo</p>  
+                <div id="map" style="height: 400px;"></div> 
+            </div> 
+            <div> 
+                <h2>Nombre</h2> 
+                <p>Hola, mi nombre es Mariana Arango Bocanegra</p> 
+                <h2>¿Que hago aqui?</h2> 
+                <p>Estudio Ingenieria Catastral y Geodesia debido a que no sabia que hacer con mi vida y no queria laburar</p> 
+            </div> 
+        </main> 
+        <footer> 
+ 
+        </footer> 
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script> 
+        <script>  
+            var map = L.map('map').setView([4.751967746877138, -74.08277280741619], 18);  
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { 
+                maxZoom: 19, 
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>' 
+            }).addTo(map); 
+            var marker = L.marker([4.751967746877138, -74.08277280741619]).addTo(map); 
+        </script> 
+    </body> 
+</html>
+
+
